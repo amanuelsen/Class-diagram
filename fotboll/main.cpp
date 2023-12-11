@@ -24,6 +24,7 @@ int main() {
 
     cout << "Ange bortalaget: ";
     getline(cin, away);
+    cout << "hej";
 
     Team* hometeam = new Team(home);
     Team* awayteam = new Team(away);
