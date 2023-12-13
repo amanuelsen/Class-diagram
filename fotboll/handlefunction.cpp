@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 #include <limits>
@@ -6,7 +7,7 @@
 
 using namespace std;
 
-int main() {
+void handleFootbalProgram() {
     char program;
 
     do {
@@ -18,8 +19,8 @@ int main() {
         cin.ignore();
 
         if (program == 'y') {
-         
-         
+
+
             string date, stadium, result;
             cout << "Ange matchens datum: ";
             getline(cin, date);
@@ -71,7 +72,7 @@ int main() {
                         cin >> age;
 
                         if (cin.fail() || age <= 0) {
-                            cout << "Ogiltig ålder. Skrive in namnet och åldern igen." << endl;
+                            cout << "Ogiltig ålder. Ange en giltig ålder." << endl;
                             cin.clear();
                             cin.ignore(numeric_limits<streamsize>::max(), '\n');
                             i--;
@@ -132,7 +133,7 @@ int main() {
                     ref = new MatchRefere(refereeName);
                     break;
                 }
-                else if(refereeChoice=='n')
+                else if (refereeChoice == 'n')
                 {
                     break;
 
@@ -142,31 +143,31 @@ int main() {
                 }
             } while (true);
 
-           
+
             cout << "Välja namn på  filen som kommer att spara informationen du anger:  " << endl;
             string textname;
             getline(cin, textname);
-            ofstream newfilw(textname+".txt");
-                if (newfilw.is_open()) {
-                    string line;
-                    newfilw << "-----------------------------------" << endl;
+            ofstream newfilw(textname + ".txt");
+            if (newfilw.is_open()) {
+                string line;
+                newfilw << "-----------------------------------" << endl;
 
-                    newfilw << "Match: " << footballmatch->homevsaway() << endl;
-                    newfilw <<"Stadium: " << footballmatch->getstadium() << endl;
-                    newfilw << "Resultaten: "<<footballmatch->getscore() << endl;
-                    newfilw << "Datum: "<<footballmatch->getdate() << endl;
-                    newfilw <<  "Domaren: ";
-                    newfilw << ref->toString() << endl;
+                newfilw << footballmatch->homevsaway() << endl;
+                newfilw << footballmatch->getstadium() << endl;
+                newfilw << footballmatch->getscore() << endl;
+                newfilw << footballmatch->getdate() << endl;
+                newfilw << "Domaren: ";
+                newfilw << ref->getRefName() << endl;
 
-                    newfilw << "Hemma lagest spelare: " << endl;
-                    newfilw<<hometeam->returnallpayer() << endl;
-                    newfilw << "Borta lagets Spelare: " << endl;
-                    newfilw << awayteam->returnallpayer() << endl;
-                    newfilw << "-----------------------------------" << endl;
+                newfilw << "Home player: " << endl;
+                newfilw << hometeam->returnallpayer() << endl;
+                newfilw << "Away player: " << endl;
+                newfilw << awayteam->returnallpayer() << endl;
+                newfilw << "-----------------------------------" << endl;
 
-                    newfilw.close();
-                }
-            
+                newfilw.close();
+            }
+
             delete footballmatch;
             delete hometeam;
             delete awayteam;
@@ -174,10 +175,10 @@ int main() {
         }
         else if (program == 's') {
             string textnamn;
-            cout << "Ange filnamnet på filen: ";
+            cout << "Ange filnamnet: ";
             getline(cin, textnamn);
 
-            ifstream file(textnamn+".txt");
+            ifstream file(textnamn + ".txt");
             if (file.is_open()) {
                 string line;
                 while (getline(file, line)) {
@@ -186,17 +187,15 @@ int main() {
                 file.close();
             }
             else {
-                cout << "Kunde inte inte filen, ta menyval (s) igen och ange en fil som existerar." << endl;
+                cout << "Kunde inte öppna filen." << endl;
             }
         }
         else if (program == 'q') {
             cout << "Avslutar programmet." << endl;
-            break; 
+            break;
         }
         else {
             cout << "Ogiltigt val. Försök igen." << endl;
         }
     } while (true);
-
-    return 0;
 }

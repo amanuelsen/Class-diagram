@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="handlefunction.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="svaeresults.cpp" />
   </ItemGroup>

@@ -21,6 +21,9 @@
     <ClCompile Include="svaeresults.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="handlefunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="player.h">

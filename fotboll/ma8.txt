@@ -1,0 +1,15 @@
+-----------------------------------
+Matche: barca vs liverpool
+Stadium: anfiled
+Resultaten:4-5
+Datum: 2023-12-19
+Domaren: jalla
+Hemma lagest spelare: 
+Player 1 Name: senai, Jersey Number: 30
+Player 2 Name: senai1, Jersey Number: 30
+
+Borta lagets Spelare: 
+Player 1 Name: filip, Jersey Number: 20
+Player 2 Name: filip1, Jersey Number: 40
+
+-----------------------------------

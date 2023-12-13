@@ -6,6 +6,7 @@ const int MAX_PLAYERS_PER_TEAM = 11;
 const int MAX_TEAMS = 2;
 
 class Player {
+    private:
 public:
     //abtract functkion
     virtual void displayInfo() const = 0;
@@ -22,6 +23,11 @@ public:
 
     void displayInfo() const override {
         cout <<  " Name: " << name << ", Jersey Number: " << jerseyNumber << endl;
+    }
+    string getanameandnum() {
+        string temp = " Name: " + name + ", Jersey Number: " + to_string(jerseyNumber);
+        return temp;
+         
     }
 };
 
@@ -45,7 +51,7 @@ public:
     }
     void addPlayer(FootballPlayer* player) {
         if (numOfPlayers < MAX_PLAYERS_PER_TEAM) {
-            players[numOfPlayers++] = player;
+            players[numOfPlayers++] = new FootballPlayer(*player);
         }
         else {
             cout << "Team is full" << endl;
@@ -55,6 +61,20 @@ public:
         for (int i = 0; i < numOfPlayers; i++) {
             cout << "Player " << i + 1; players[i]->displayInfo();
         }
+    }
+    string returnallpayer() {
+        string temp;
+        if (numOfPlayers == 0) {
+            return "Inga spelare angivna;";
+        }
+        else {
+            temp = "";
+            for (int i = 0; i < numOfPlayers; i++) {
+                temp += "Player " + to_string(i + 1) + players[i]->getanameandnum() + "\n";
+            }
+            return temp;
+        }
+        
     }
     string getname() {
         return name;
@@ -93,10 +113,29 @@ public:
 
     void addTeam(Team* team) {
         if (numOfTeams < MAX_TEAMS) {
-            teams[numOfTeams++] = team;
+            teams[numOfTeams++] = new Team(*team);
         }
     }
+    string homevsaway() {
+        return teams[0]->getname() + " vs "+ teams[1]->getname();
+    }
+    string getdate() {
+        return date;
+    }
+    string getscore() {
+        return score;
 
+    }
+    string getstadium() {
+        return stadium;
+    }
+    string gethometemaplayers() {
+        return teams[0]->returnallpayer();
+    }
+    string getawaytemaplayers() {
+        return teams[1]->returnallpayer();
+    }
+    
     void displayMatchInfo() const override {
         if (numOfTeams == MAX_TEAMS) {
             cout << teams[0]->getname() << " vs " << teams[1]->getname() << endl;
@@ -117,10 +156,8 @@ private:
     string name;
 
 public:
-    Referees() {
-        this->name = "anonym";
-    }
-    Referees(string name) : name(name) {}
+ 
+    Referees(string name="anonym") : name(name) {}
     virtual ~Referees() {} // Adding a virtual destructor for polymorphic behavior
 
     string getRefName() {
@@ -142,7 +179,6 @@ private:
     string matchReferee;
 
 public:
-    MatchRefere();
     MatchRefere(string matchReferee) : matchReferee(matchReferee) {}
 
     string toString() override {
