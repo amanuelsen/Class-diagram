@@ -1,0 +1,11 @@
+-----------------------------------
+Match: h vs b
+Stadium: stadium
+Resultaten: 5-7
+Datum: hej
+Domaren: anonym
+Hemma lagest spelare: 
+Inga spelare angivna;
+Borta lagets Spelare: 
+Inga spelare angivna;
+-----------------------------------

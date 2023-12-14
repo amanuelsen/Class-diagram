@@ -18,8 +18,8 @@ int main() {
         cin.ignore();
 
         if (program == 'y') {
-         
-         
+
+
             string date, stadium, result;
             cout << "Ange matchens datum: ";
             getline(cin, date);
@@ -132,7 +132,7 @@ int main() {
                     ref = new MatchRefere(refereeName);
                     break;
                 }
-                else if(refereeChoice=='n')
+                else if (refereeChoice == 'n')
                 {
                     break;
 
@@ -142,31 +142,31 @@ int main() {
                 }
             } while (true);
 
-           
+
             cout << "Välja namn på  filen som kommer att spara informationen du anger:  " << endl;
             string textname;
             getline(cin, textname);
-            ofstream newfilw(textname+".txt");
-                if (newfilw.is_open()) {
-                    string line;
-                    newfilw << "-----------------------------------" << endl;
+            ofstream newfilw(textname + ".txt");
+            if (newfilw.is_open()) {
+                string line;
+                newfilw << "-----------------------------------" << endl;
 
-                    newfilw << "Match: " << footballmatch->homevsaway() << endl;
-                    newfilw <<"Stadium: " << footballmatch->getstadium() << endl;
-                    newfilw << "Resultaten: "<<footballmatch->getscore() << endl;
-                    newfilw << "Datum: "<<footballmatch->getdate() << endl;
-                    newfilw <<  "Domaren: ";
-                    newfilw << ref->toString() << endl;
+                newfilw << "Match: " << footballmatch->homevsaway() << endl;
+                newfilw << "Stadium: " << footballmatch->getstadium() << endl;
+                newfilw << "Resultaten: " << footballmatch->getscore() << endl;
+                newfilw << "Datum: " << footballmatch->getdate() << endl;
+                newfilw << "Domaren: ";
+                newfilw << ref->toString() << endl;
 
-                    newfilw << "Hemma lagest spelare: " << endl;
-                    newfilw<<hometeam->returnallpayer() << endl;
-                    newfilw << "Borta lagets Spelare: " << endl;
-                    newfilw << awayteam->returnallpayer() << endl;
-                    newfilw << "-----------------------------------" << endl;
+                newfilw << "Hemma lagest spelare: " << endl;
+                newfilw << hometeam->returnallpayer() << endl;
+                newfilw << "Borta lagets Spelare: " << endl;
+                newfilw << awayteam->returnallpayer() << endl;
+                newfilw << "-----------------------------------" << endl;
 
-                    newfilw.close();
-                }
-            
+                newfilw.close();
+            }
+
             delete footballmatch;
             delete hometeam;
             delete awayteam;
@@ -177,7 +177,7 @@ int main() {
             cout << "Ange filnamnet på filen: ";
             getline(cin, textnamn);
 
-            ifstream file(textnamn+".txt");
+            ifstream file(textnamn + ".txt");
             if (file.is_open()) {
                 string line;
                 while (getline(file, line)) {
@@ -191,7 +191,7 @@ int main() {
         }
         else if (program == 'q') {
             cout << "Avslutar programmet." << endl;
-            break; 
+            break;
         }
         else {
             cout << "Ogiltigt val. Försök igen." << endl;
