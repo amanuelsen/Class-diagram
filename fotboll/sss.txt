@@ -1,8 +1,8 @@
 -----------------------------------
-Match: h vs b
-Stadium: stadium
-Resultat: 5-3
-Datum: 3000
+Match: g vs w
+Stadium: gsgsg
+Resultat: g
+Datum: irrgsg
 Domaren: anonym
 Hemmalagets spelare: 
 Inga spelare angivna;

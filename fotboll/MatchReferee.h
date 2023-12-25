@@ -6,12 +6,12 @@
 
 #include "Referees.h"
 
-class MatchRefere : public Referees {
-private:
-    std::string matchReferee;
-
-public:
-    MatchRefere(std::string matchReferee);
-
-    std::string toString() override;
-};
+//class MatchRefere : public Referees {
+//private:
+//    std::string matchReferee;
+//
+//public:
+//    MatchRefere(std::string matchReferee);
+//
+//    std::string toString() override;
+//};

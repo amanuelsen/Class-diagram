@@ -1,16 +1,17 @@
 #pragma once
-
+#include "SportsPerson.h"
 #include <iostream>
 using namespace std;
+
 
 const int MAX_PLAYERS_PER_TEAM = 11;
 const int MAX_TEAMS = 2;
 
-class Player {
+class Player: public SportsPerson {
     private:
 public:
     //abtract functkion
-    virtual void displayInfo() const = 0;
+    string displayInfo() const  override;
     virtual ~Player() {}
 };
 

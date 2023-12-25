@@ -11,6 +11,5 @@ private:
 public:
     FootballPlayer(const std::string& playerName, int playerJersey);
 
-    void displayInfo() const override;
-    std::string getanameandnum();
+    string displayInfo() const override;
 };

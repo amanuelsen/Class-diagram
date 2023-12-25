@@ -132,8 +132,9 @@
     <ClCompile Include="handlefunction.cpp" />
     <ClCompile Include="HandleMatch.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MatchReferee.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="Referees.cpp" />
+    <ClCompile Include="SportsPerson.cpp" />
     <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,11 +142,11 @@
     <ClInclude Include="Footballplayer.h" />
     <ClInclude Include="HandleMatch.h" />
     <ClInclude Include="Match.h" />
-    <ClInclude Include="MatchReferee.h" />
     <ClInclude Include="player.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Referees.h" />
+    <ClInclude Include="SportsPerson.h" />
     <ClInclude Include="Team.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

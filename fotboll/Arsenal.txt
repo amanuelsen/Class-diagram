@@ -1,11 +1,11 @@
 -----------------------------------
-Match: h vs b
-Stadium: stadium
-Resultat: 5-3
-Datum: 3000
+Match: Liverpool vs Arsenal
+Stadium: Anfield
+Resultaten: 3-1
+Datum: 23/12-23
 Domaren: anonym
-Hemmalagets spelare: 
+Hemma lagest spelare: 
 Inga spelare angivna;
-Bortalagets spelare: 
+Borta lagets Spelare: 
 Inga spelare angivna;
 -----------------------------------

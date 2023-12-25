@@ -36,7 +36,7 @@ std::string Team::returnallpayer() {
     else {
         temp = "";
         for (int i = 0; i < numOfPlayers; i++) {
-            temp += "Player " + std::to_string(i + 1) + players[i]->getanameandnum() + "\n";
+            temp += "Player " + std::to_string(i + 1) + players[i]->displayInfo() + "\n";
         }
         return temp;
     }
