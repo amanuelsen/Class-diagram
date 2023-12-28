@@ -1,0 +1,11 @@
+-----------------------------------
+Match: d vs d
+Stadium: d
+Resultat: d
+Datum: 49494d
+Domaren: anonym
+Hemmalagets spelare: 
+Inga spelare angivna;
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

@@ -2,9 +2,12 @@
 #include <string>
 #include <limits>
 #include <fstream>
+#include <memory>
 #include "player.h"
 #include "HandleMatch.h"
 #include "Referees.h"
+//Vi importerar <limits> för att rensa inmatningsbufferten och 
+// och vi använder memory för att använda smarta pekare , för att hantera minnesresurser på ett säkrt sätt.
 
 using namespace std;
 
@@ -22,7 +25,7 @@ int main() {
             std::cin.ignore();
 
             if (program == 'y' || program == 's' || program == 'q') {
-                break; 
+                break;
             }
             else {
                 std::cout << "Ogiltigt val. Försök igen.\n";
@@ -40,7 +43,7 @@ int main() {
             std::cout << "Ange matchresultat: ";
             std::getline(std::cin, result);
 
-            FootballMatch* footballmatch = new FootballMatch(date, stadium, result);
+            std::unique_ptr<FootballMatch> footballmatch(new FootballMatch(date, stadium, result));
 
             std::string home, away;
             std::cout << "Ange hemmalaget: ";
@@ -49,11 +52,11 @@ int main() {
             std::cout << "Ange bortalaget: ";
             std::getline(std::cin, away);
 
-            Team* hometeam = new Team(home);
-            Team* awayteam = new Team(away);
+            std::unique_ptr<Team> hometeam(new Team(home));
+            std::unique_ptr<Team> awayteam(new Team(away));
 
-            footballmatch->addTeam(hometeam);
-            footballmatch->addTeam(awayteam);
+            footballmatch->addTeam(hometeam.get());
+            footballmatch->addTeam(awayteam.get());
 
             char playerChoice;
             bool validPlayerChoice = false;
@@ -89,20 +92,18 @@ int main() {
                                 continue;
                             }
 
-                            FootballPlayer* player = new FootballPlayer(name, age);
-                            hometeam->addPlayer(player);
+                            std::unique_ptr<FootballPlayer> player(new FootballPlayer(name, age));
+                            hometeam->addPlayer(player.get());
                         }
                     }
                 }
                 else {
-                    
-
                     std::cout << "Ogiltigt val. Ange 'j' eller 'n'." << std::endl;
                 }
             } while (true);
 
             char refereeChoice;
-            Referees* ref = new Referees();
+            std::unique_ptr<Referees> ref(new Referees());
 
             do {
                 std::cout << "Vill du lägga till domarenamn? Ange 'j' för ja och 'n' för nej: ";
@@ -122,7 +123,7 @@ int main() {
                 }
             } while (refereeChoice != 'j' && refereeChoice != 'n');
 
-            std::cout << "Ange namn på filen för att spara informationen , (OBS! om namnen finns redan så kommer den att ersättas med den nya informationen): ";
+            std::cout << "Ange namn på filen för att spara informationen: ";
             std::string textname;
             std::getline(std::cin, textname);
             std::ofstream newfile(textname + ".txt");
@@ -144,11 +145,6 @@ int main() {
 
                 newfile.close();
             }
-
-            delete footballmatch;
-            delete hometeam;
-            delete awayteam;
-            delete ref;
 
         }
         else if (program == 's') {
