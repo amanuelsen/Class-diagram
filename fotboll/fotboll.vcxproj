@@ -128,24 +128,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Footballmatch.cpp" />
-    <ClCompile Include="Footballplayer.cpp" />
-    <ClCompile Include="handlefunction.cpp" />
-    <ClCompile Include="HandleMatch.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Match.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="Referees.cpp" />
+    <ClCompile Include="Resulthandler.cpp" />
     <ClCompile Include="SportsPerson.cpp" />
     <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Footballmatch.h" />
-    <ClInclude Include="Footballplayer.h" />
-    <ClInclude Include="HandleMatch.h" />
     <ClInclude Include="Match.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="player.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Referees.h" />
+    <ClInclude Include="Resulthandler.h" />
     <ClInclude Include="SportsPerson.h" />
     <ClInclude Include="Team.h" />
   </ItemGroup>

@@ -1,0 +1,12 @@
+-----------------------------------
+Match: h vs b
+Stadium: stadium
+Resultat: 3-4
+Datum: 444
+Domaren: senai
+Hemmalagets spelare: 
+Player 1 Name: peter, Jersey Number: 20
+
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

@@ -4,18 +4,25 @@
 #include "player.h"
 #include "Footballplayer.h"
 
+
 class Team {
 private:
-    std::string name;
-    FootballPlayer* players[MAX_PLAYERS_PER_TEAM];
+    const int MAX_PLAYERS_PER_TEAM = 11;
+
+        
+
+    string name;
+    Player* players[MAX_PLAYERS_PER_TEAM];
     int numOfPlayers;
 
 public:
+    
+    Team();
     Team(const std::string& teamName);
-    ~Team();
+    virtual~Team();
 
-    void addPlayer(FootballPlayer* player);
+    void addPlayer(Player* player);
     void showallplayers();
     std::string returnallpayer();
-    std::string getname();
+    std::string getTeamname();
 };

@@ -1,0 +1,11 @@
+-----------------------------------
+Match: h vs h
+Stadium: h
+Resultat: h
+Datum: h
+Domaren: anonym
+Hemmalagets spelare: 
+Inga spelare angivna;
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

@@ -4,15 +4,29 @@
 using namespace std;
 
 
-const int MAX_PLAYERS_PER_TEAM = 11;
-const int MAX_TEAMS = 2;
+
 
 class Player: public SportsPerson {
     private:
+
+        int position;
+        int jerseyNr;
+        int goalsScored;
+        
+
 public:
+    Player(string name, int age, string personnummer, int position, int jerseyNr, int goalsScored);
     //abtract functkion
     string displayInfo() const  override;
     virtual ~Player() {}
+
+    int getPosition();
+    int getJerseyNr();
+    int getGoalsScored();
+
+    void setPosition(int position);
+    void setJerseyNr(int jerseyNr);
+    void setGoalsScored(int goalsScored);
 };
 
 //class FootballPlayer : public Player {

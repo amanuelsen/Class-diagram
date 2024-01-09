@@ -1,0 +1,11 @@
+-----------------------------------
+Match: tt vs bb
+Stadium: tt
+Resultat: ttt
+Datum: ttt
+Domaren: anonym
+Hemmalagets spelare: 
+Inga spelare angivna;
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

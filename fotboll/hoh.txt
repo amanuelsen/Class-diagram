@@ -1,0 +1,12 @@
+-----------------------------------
+Match: h vs b
+Stadium: h
+Resultat: h
+Datum: y
+Domaren: hhh
+Hemmalagets spelare: 
+Player 1 Name: h, Jersey Number: 7
+
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

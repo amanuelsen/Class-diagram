@@ -1,0 +1,11 @@
+-----------------------------------
+Match: h vs b
+Stadium: yyy
+Resultat: 77
+Datum: 66
+Domaren: anonym
+Hemmalagets spelare: 
+Inga spelare angivna;
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

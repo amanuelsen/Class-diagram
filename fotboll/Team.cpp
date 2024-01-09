@@ -1,5 +1,11 @@
 #include "Team.h"
 
+Team::Team()
+{
+    this->name = "";
+    this->numOfPlayers = 0;
+}
+
 Team::Team(const std::string& teamName) : name(teamName), numOfPlayers(0) {
     for (int i = 0; i < MAX_PLAYERS_PER_TEAM; ++i) {
         players[i] = nullptr; // Initialize all pointers to nullptr
@@ -12,9 +18,9 @@ Team::~Team() {
     }
 }
 
-void Team::addPlayer(FootballPlayer* player) {
+void Team::addPlayer(Player* player) {
     if (numOfPlayers < MAX_PLAYERS_PER_TEAM) {
-        players[numOfPlayers++] = new FootballPlayer(*player);
+        players[numOfPlayers++] = new Player(*player);
     }
     else {
         std::cout << "Team is full" << std::endl;
@@ -42,6 +48,6 @@ std::string Team::returnallpayer() {
     }
 }
 
-std::string Team::getname() {
+std::string Team::getTeamname() {
     return name;
 }

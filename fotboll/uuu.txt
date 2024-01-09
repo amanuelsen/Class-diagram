@@ -1,0 +1,11 @@
+-----------------------------------
+Match: t vs t
+Stadium: t
+Resultat: t
+Datum: t
+Domaren: isak
+Hemmalagets spelare: 
+Inga spelare angivna;
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

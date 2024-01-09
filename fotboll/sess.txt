@@ -1,0 +1,12 @@
+-----------------------------------
+Match:  vs 
+Stadium: gjg
+Resultat: fhg
+Datum: hthh
+Domaren: sensi
+Hemmalagets spelare: 
+Player 1 Name: h, Jersey Number: 60
+
+Bortalagets spelare: 
+Inga spelare angivna;
+-----------------------------------

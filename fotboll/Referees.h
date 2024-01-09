@@ -13,12 +13,21 @@ using namespace std;
 
 class Referees:public SportsPerson {
 private:
-    std::string name;
+    int yearsExperience;
+    int highestDivision;
 
+
+
+    
 public:
-    Referees(std::string name = "anonym");
+    Referees();
+    
+    Referees(int age, string personnummer, int yearsExperience, int highestDivision, string name = "anonym");
+    int getYearsExperience() const;
+    void setYearsExperience(int experience);
+    int getHighestDivision() const;
+    void setHighestDivision(int division);
     virtual ~Referees();
     string displayInfo()const override;
-    std::string getRefName();
-    void setRefName(std::string refName);
+  
 };
